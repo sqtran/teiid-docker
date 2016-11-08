@@ -1,4 +1,4 @@
-FROM sqtran/teiid-base:latest
+FROM sqtran/teiid-base:9.0.3
 
 EXPOSE 8080 9990 9999 31000 35432
 
