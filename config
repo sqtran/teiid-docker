@@ -1,6 +1,7 @@
 
 /home/stran/JDV6.3/bin/jboss-cli.sh --connect --controller=r7vm:X
 
+/home/phantom/teiid-8.13.5/bin/jboss-cli.sh --connect --controller=172.17.0.2
 
 /host=master/server-config=server-three:remove()
 /server-group=other-server-group:stop-servers()
