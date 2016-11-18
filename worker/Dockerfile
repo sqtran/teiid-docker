@@ -4,6 +4,7 @@ EXPOSE 8080 31000 35432
 
 WORKDIR /opt/jboss/teiid-9.1.1/
 
+# Adds the remote node credentials to the config file, and removes all servers except server-one (to keep it a 1-server slave)
 RUN sed -i -e 's/c2xhdmVfdXNlcl9wYXNzd29yZA==/YWRtaW4xMjMh/g' domain/configuration/host-slave.xml && \
     sed -i -e 's/<remote security-realm="ManagementRealm">/<remote security-realm="ManagementRealm" username="remotenode">/g' domain/configuration/host-slave.xml && \
     tr \\n \# < domain/configuration/host-slave.xml > domain/configuration/host-slave2.xml && \
