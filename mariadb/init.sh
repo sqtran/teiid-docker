@@ -8,6 +8,9 @@ MIP=$(docker inspect $(docker ps | grep mariadb | cut -f 1 -d " ") | grep "IPAdd
 #MPORT=$(docker ps | grep 3306 | cut -d ":" -f 3 | cut -d "-" -f 1)
 MPORT=3306
 
+
+java -jar jboss-cli-client.jar --connect --controller=$CIP:$CPORT --user=admin --password=admin123! --file=teiid-domain-mode-install.cli
+
 cp template.cli batch.cli
 sed -i -e "s/IPADDRESS/$MIP/" batch.cli
 sed -i -e "s/PORT/$MPORT/" batch.cli

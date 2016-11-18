@@ -4,11 +4,11 @@
 /host=master/server-config=server-two:stop(blocking=true)
 /host=master/server-config=server-two:remove()
 
-/profile=full/subsystem=datasources/jdbc-driver=mysql:add(\
+/profile=ha/subsystem=datasources/jdbc-driver=mysql:add(\
     driver-name=mysql,\
     driver-module-name=com.mysql,\
     driver-class-name=com.mysql.jdbc.Driver,\
     driver-xa-datasource-class-name=com.mysql.jdbc.jdbc2.optional.MysqlXADataSource\
 )
 
-/profile=full/subsystem=datasources/data-source=MySQLTest:add(driver-name=mysql,driver-class="com.mysql.jdbc.Driver", jndi-name="java:/MySQLTest",connection-url="jdbc:mysql://IPADDRESS:PORT/demo",user-name=root,password=root,valid-connection-checker-class-name="org.jboss.jca.adapters.jdbc.extensions.mysql.MySQLValidConnectionChecker",exception-sorter-class-name="org.jboss.jca.adapters.jdbc.extensions.mysql.MySQLExceptionSorter")
+/profile=ha/subsystem=datasources/data-source=MySQLTest:add(driver-name=mysql,driver-class="com.mysql.jdbc.Driver", jndi-name="java:/MySQLTest",connection-url="jdbc:mysql://IPADDRESS:PORT/demo",user-name=root,password=root,valid-connection-checker-class-name="org.jboss.jca.adapters.jdbc.extensions.mysql.MySQLValidConnectionChecker",exception-sorter-class-name="org.jboss.jca.adapters.jdbc.extensions.mysql.MySQLExceptionSorter")
