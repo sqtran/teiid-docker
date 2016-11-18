@@ -1,6 +1,6 @@
 FROM sqtran/teiid-base:9.1.1
 
-EXPOSE 8080 9990 9999 31000 35432
+EXPOSE 8080 31000 35432
 
 WORKDIR /opt/jboss/teiid-9.1.1/
 
