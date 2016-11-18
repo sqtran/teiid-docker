@@ -12,3 +12,5 @@
 )
 
 /profile=ha/subsystem=datasources/data-source=MySQLTest:add(driver-name=mysql,driver-class="com.mysql.jdbc.Driver", jndi-name="java:/MySQLTest",connection-url="jdbc:mysql://IPADDRESS:PORT/demo",user-name=root,password=root,valid-connection-checker-class-name="org.jboss.jca.adapters.jdbc.extensions.mysql.MySQLValidConnectionChecker",exception-sorter-class-name="org.jboss.jca.adapters.jdbc.extensions.mysql.MySQLExceptionSorter")
+
+deploy DockerizedDemo.vdb --all-server-groups
