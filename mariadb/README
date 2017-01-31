@@ -1,0 +1,7 @@
+The run script starts the mariadb container.
+
+To connect to this: 
+
+mysql -u root -p -h 192.168.122.74 -P 32768
+
+The IP and Port will need to be changed depending on where you are connecting from.
