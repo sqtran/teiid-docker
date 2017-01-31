@@ -1,0 +1,7 @@
+The run script will start the container with the postgres image.
+
+The JDBC URL will look something like the following.  Replace the host and port with the appropriate values.
+
+The database is pg.
+
+jdbc:postgresql://192.168.122.74:32769/
