@@ -24,3 +24,13 @@ INSERT INTO `Person` (`PersonId`,`LastName`,`FirstName`,`Address`,`City`) VALUES
 INSERT INTO `Person` (`PersonId`,`LastName`,`FirstName`,`Address`,`City`) VALUES (21,"Gregory","Alma","166-6975 Luctus Ave","Alvito"),(22,"Velazquez","Nina","9072 Tellus Rd.","Wandlitz"),(23,"Lopez","Hedda","P.O. Box 406, 2560 Tempus St.","Sainte-Ode"),(24,"Webster","Shannon","Ap #111-5633 Nibh Av.","Elversele"),(25,"Cruz","Aphrodite","720-1181 Curabitur Road","Peralillo"),(26,"Goodwin","Kerry","508-1022 Ac St.","Roosdaal"),(27,"Mathis","Micah","P.O. Box 885, 4221 Dictum. Road","Neerglabbeek"),(28,"Cline","Carlos","239-6759 At St.","Mont"),(29,"Powell","Priscilla","Ap #809-4371 Magna. Road","Vernole"),(30,"Dotson","Hayes","Ap #659-408 Dolor. Ave","Centa San Nicolò");
 INSERT INTO `Person` (`PersonId`,`LastName`,`FirstName`,`Address`,`City`) VALUES (31,"Bailey","Selma","P.O. Box 988, 4921 Pede Rd.","Bay Roberts"),(32,"Bolton","Astra","P.O. Box 389, 3657 In Rd.","HŽron"),(33,"Holloway","Leslie","P.O. Box 100, 6586 Leo. Ave","Pittsburgh"),(34,"Nunez","Baker","P.O. Box 256, 8529 Ut St.","Calmar"),(35,"Mercado","Teegan","9147 Nisi St.","Brandon"),(36,"Boyle","Leonard","P.O. Box 439, 9387 Malesuada Road","Monstreux"),(37,"Skinner","Jordan","P.O. Box 637, 9173 Felis Ave","Llanelli"),(38,"Randolph","Lyle","Ap #984-8578 Interdum Road","Cassaro"),(39,"Rodriquez","Oren","481 Natoque Rd.","Deventer"),(40,"Aguilar","Orlando","9432 Suspendisse St.","Maintal");
 INSERT INTO `Person` (`PersonId`,`LastName`,`FirstName`,`Address`,`City`) VALUES (41,"Preston","Ryder","890-367 Ullamcorper Rd.","Clarksville"),(42,"Blanchard","Brenda","373-5452 Orci Road","Maple Creek"),(43,"Lane","Kerry","434 Eu St.","IJlst"),(44,"Wooten","Steven","Ap #876-6095 Arcu Road","Sint-Pieters-Kapelle"),(45,"Ray","Vanna","Ap #130-1161 Iaculis St.","Sobral"),(46,"Schneider","Allistair","P.O. Box 693, 1358 Proin Road","Timaru"),(47,"Mack","Winter","8468 Et St.","Stratford-upon-Avon"),(48,"King","Harper","Ap #580-1702 Lacus. Av.","Casnate con Bernate"),(49,"Rasmussen","Xanthus","Ap #403-548 Pede. Rd.","North Barrackpur"),(50,"Hobbs","Armando","P.O. Box 569, 3360 Arcu Rd.","Cagli");
+
+DROP PROCEDURE IF EXISTS person_select;
+
+DELIMITER //
+CREATE PROCEDURE person_select(IN name char(20))
+BEGIN
+select * from Person where FirstName = name;
+END //
+DELIMITER ;
+
